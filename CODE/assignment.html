@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chợ Đồ Cổ</title>
+    <link href="assignment.css" rel="stylesheet">
+    <script>
+        function func1(){
+            var dem = 0;
+            var dien = document.getElementById("text1").value;
+            if ( dien != "I WANT" ){
+                document.getElementById("loi").innerHTML = "  TYPE WRONG !";
+                dem++;
+            }
+            else{
+                document.getElementById("loi").innerHTML = "";
+            }
+            if( dem != 0 ){
+                return false;
+            }
+            else{
+                return true;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div id="main">
+    <div id="head">
+        <img id="img1" src="top-dia-chi-mua-ban-do-co-suu-tam-co-vat-uy-tin-nhat-hcm-1 (1).jpg">
+    </div>
+    <div id="head1">
+    <form action="assignment1.html" method="GET">
+        <h1><font color="red">ARE YOU SURE TO ACCESS Chợ Đồ Cổ ?</font></h1><br>
+        <hr>
+        <h3>IF YES , TYPE "I WANT" DOWN BELOW : </h3>
+        <input type="text" id="text1"><span id="loi"></span><br><br>
+        <button onclick="return func1()">Submit</button>
+    </div>
+</div>
+    </form>
+    
+</body>
+</html>

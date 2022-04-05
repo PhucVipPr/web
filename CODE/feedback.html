@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assignment1.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Chợ Đồ Cổ</title>
+    <script>
+      function func1(){
+        var count =0;
+            var ho_ten = document.getElementById("name").value;
+            var regex_ho_ten = /^[a-zA-ZàÀảẢãÃáÁạẠăĂằẰẳẲẵẴắẮặẶâÂầẦẩẨẫẪấẤậẬđĐeEèÈẻẺẽẼéÉẹẸêÊềỀểỂễỄếẾệỆìÌỉỈĩĨíÍịỊòÒỏỎõÕóÓọỌôÔồỒổỔỗỖốỐộỘơƠờỜởỞỡỠớỚợỢùÙủỦũŨúÚụỤưƯừỪửỬữỮứỨựỰỳỲỷỶỹỸýÝỵỴ\s]+$/;
+            var kq_ho_ten = regex_ho_ten.test(ho_ten);
+            if( ho_ten.length == 0 ){
+                document.getElementById('loi1').innerHTML = " No information";
+                count++;
+            }
+            else if(kq_ho_ten == false){
+                document.getElementById('loi1').innerHTML = " Type worng";
+                count++;
+            }
+            else{
+                document.getElementById('loi1').innerHTML = "";
+            }
+            var e_mail = document.getElementById("email").value;
+            var regex_email = /^[a-zA-Z0-9]+[a-zA-Z0-9.]*@[a-z]{3,8}.[a-z]{3,4}$/;
+            var kq_e_mail = regex_email.test(e_mail);
+            if( e_mail.length == 0 ){ 
+                document.getElementById('loi2').innerHTML = " No information";
+                count++;
+            }
+            else if( kq_e_mail == false){
+                document.getElementById('loi2').innerHTML = " Type wrong";
+                count++;
+            }
+            else{
+                document.getElementById('loi2').innerHTML = "";
+            }
+            var so_dth = document.getElementById("sdth").value;
+            var regex_so_dth = /^0[0-9]{9,10}$/;
+            var kq_so_dth = regex_so_dth.test(so_dth);
+            if( so_dth.length == 0 ){
+                document.getElementById('loi3').innerHTML = " No information";
+                count++;
+            }
+            else if(kq_so_dth == false){
+                document.getElementById('loi3').innerHTML = " Type wrong";
+                count++;
+            }
+            else{
+                document.getElementById('loi3').innerHTML = "";
+            }
+            if( count != 0 ){
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="top_menu">
+        <ul class="menu">
+            <li><p style="color: white;">WELCOME TO OUR STORE-Chợ Đồ Cổ  &nbsp;|</p></li>
+            <li><i style="color: white;" > FEEL FREE TO BUY ANY ANIQUES YOU WANT &nbsp;</i></li>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <li><a href="http://127.0.0.1:5500/assignment1.html"><font color="white">Home</font></a></li>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <li><a href="http://127.0.0.1:5500/Feedback.html"><font color="white">Feedback</font></a></li>
+        </ul>
+    </div>
+    <div class="top_menu1">
+        <ul class="menu1">
+            <a href="">
+                <img src="logo.jpg"  style="margin-left:0px;margin-top: -10px;" width="300px">
+            </a>     
+          <li><div class="box">        
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <input type="search" id="search" placeholder="Let's find something..." />
+          </div></li>      
+        </ul>
+    </div>
+      <br>
+      <br>
+      <br>
+      <hr type="margin"  color="blue" height="100px">
+    <br>
+    <br>
+    <br>
+    <form action="assignment2.html" method="GET">
+    <h1 style="text-align: center;"><font color="blue">PLEASE LET US KNOW IF YOU HAVE ANY PROBLEM</font></h1><br>
+      <h4 style="text-align: center;">Your name &nbsp;&nbsp;&nbsp; <input type="text" id="name"><span id="loi1"></span></h4>
+      <h4 style="text-align: center;">Your email &nbsp;&nbsp;&nbsp; <input type="text" id="email"><span id="loi2"></span></h4>
+      <h4 style="text-align: center;">Your pnb &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" id="sdth"><span id="loi3"></span></h4>
+      <h4 style="text-align: center;">Products &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <select type="circle">
+            <option>CAR</option>
+            <option>GUN</option>
+            <option>LAMP</option>
+            <option>PHONE</option>
+            <option>CLOCK</option>
+            <option>MUSIC BOX</option>
+        </select>
+        <br>
+        <br>
+        <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button onclick="return func1()">Submit</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <hr style="margin" color="blue" height="15px">
+    <div class="footer">
+      <table style="width:100%" margin-right="20px" >
+          <tr>
+              <td>
+            <h3><font color="red">ABOUT Chợ Đồ Cổ</font> </h3>
+            <p>Address : Hà Nội , Mỹ Đình 2 , Nam Từ Liêm , số 69
+            <br>We have every antiques you want
+            <br>Quality, reputation number 1</p>
+             </td>
+            <td>
+            <h3><font color="red">Contact information</font></h3>
+            <p>Hotline: 0343547241
+            </p>
+        </td>
+        </tr>
+        </table>
+    </div>
+</body>
+</html>
